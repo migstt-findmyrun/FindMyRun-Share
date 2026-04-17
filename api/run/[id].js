@@ -6,6 +6,8 @@ export default async function handler(req, res) {
     const anonKey = process.env.SUPABASE_ANON_KEY;
 
     try {
+        console.log('Fetching run id:', id, '| key present:', !!anonKey);
+
         const response = await fetch(
             `${SUPABASE_URL}/rest/v1/events?id=eq.${encodeURIComponent(id)}&select=*,clubs(*),routes(*)&limit=1`,
             {
@@ -16,13 +18,15 @@ export default async function handler(req, res) {
             }
         );
 
+        const rawText = await response.text();
+        console.log(`Supabase status: ${response.status}, body: ${rawText.substring(0, 300)}`);
+
         if (!response.ok) {
-            console.error(`Supabase error ${response.status}:`, await response.text());
             res.setHeader('Content-Type', 'text/html; charset=utf-8');
             return res.status(500).send(errorPage());
         }
 
-        const runs = await response.json();
+        const runs = JSON.parse(rawText);
         const run = runs?.[0];
 
         res.setHeader('Content-Type', 'text/html; charset=utf-8');
