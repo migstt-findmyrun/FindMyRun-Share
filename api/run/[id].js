@@ -16,6 +16,12 @@ export default async function handler(req, res) {
             }
         );
 
+        if (!response.ok) {
+            console.error(`Supabase error ${response.status}:`, await response.text());
+            res.setHeader('Content-Type', 'text/html; charset=utf-8');
+            return res.status(500).send(errorPage());
+        }
+
         const runs = await response.json();
         const run = runs?.[0];
 
