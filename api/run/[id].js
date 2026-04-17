@@ -90,13 +90,10 @@ function runPage(run) {
     .app-icon {
       width: 72px;
       height: 72px;
-      background: #1c1c1e;
       border-radius: 18px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: block;
       margin: 0 auto 10px;
-      font-size: 38px;
+      overflow: hidden;
     }
     .app-name {
       font-size: 20px;
@@ -184,7 +181,7 @@ function runPage(run) {
 </head>
 <body>
   <div class="app-header">
-    <div class="app-icon">🏃</div>
+    <img class="app-icon" src="/app-icon.png" alt="FindMyRun">
     <div class="app-name">FindMyRun</div>
   </div>
 
