@@ -1,6 +1,6 @@
 const SUPABASE_URL = 'https://fznbkrpgfhfeahkdehps.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ6bmJrcnBnZmhmZWFoa2RlaHBzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU3NjQwNzksImV4cCI6MjA5MTM0MDA3OX0.0jqRCvcWHAlqSAh0b8xhARjRI-8TepHmTJJU4i2Wy0o';
-const APP_STORE_URL = 'https://apps.apple.com/app/id807008199';
+const APP_STORE_URL = 'https://apps.apple.com/ca/app/findmyrun/id807008199';
 
 export default async function handler(req, res) {
     const { id } = req.query;
