@@ -1,12 +1,13 @@
 {
   "applinks": {
+    "apps": [],
     "details": [
       {
         "appIDs": ["VQNUKZ7KS3.migstt.FindMyRun"],
         "components": [
           {
             "/": "/run/*",
-            "comment": "Opens FindMyRun app for shared run links"
+            "comment": "Match all run share links"
           }
         ]
       }
