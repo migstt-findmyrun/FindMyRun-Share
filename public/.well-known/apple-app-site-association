@@ -8,6 +8,10 @@
           {
             "/": "/run/*",
             "comment": "Match all run share links"
+          },
+          {
+            "/": "/club/*",
+            "comment": "Match all club share links"
           }
         ]
       }

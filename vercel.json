@@ -1,6 +1,7 @@
 {
   "rewrites": [
-    { "source": "/run/:id", "destination": "/api/run/:id" }
+    { "source": "/run/:id", "destination": "/api/run/:id" },
+    { "source": "/club/:id", "destination": "/api/club/:id" }
   ],
   "headers": [
     {
